@@ -1,0 +1,298 @@
+[debug] [2022-07-12T20:54:32.289Z] ----------------------------------------------------------------------
+[debug] [2022-07-12T20:54:32.290Z] Command:       /opt/homebrew/Cellar/node/18.4.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2022-07-12T20:54:32.290Z] CLI Version:   11.2.1
+[debug] [2022-07-12T20:54:32.290Z] Platform:      darwin
+[debug] [2022-07-12T20:54:32.290Z] Node Version:  v18.4.0
+[debug] [2022-07-12T20:54:32.291Z] Time:          Tue Jul 12 2022 15:54:32 GMT-0500 (Central Daylight Time)
+[debug] [2022-07-12T20:54:32.291Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-12T20:54:32.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-12T20:54:32.322Z] > authorizing via signed-in user (nd.corc@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/nolan/dev/apps/portfolio_apps/my_portfolio
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-07-12T20:54:46.509Z] Using project from CLI flag: nolan-portfolio
+[debug] [2022-07-12T20:54:46.512Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nolan-portfolio [none]
+[debug] [2022-07-12T20:54:46.857Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nolan-portfolio 200
+[debug] [2022-07-12T20:54:46.857Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nolan-portfolio {"projectId":"nolan-portfolio","projectNumber":"355601726935","displayName":"nolan-portfolio","name":"projects/nolan-portfolio","resources":{"hostingSite":"nolan-portfolio","storageBucket":"nolan-portfolio.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] i  Using project nolan-portfolio (nolan-portfolio) 
+[info] 
+=== Firestore Setup
+[debug] [2022-07-12T20:54:46.881Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/firestore.googleapis.com [none]
+[debug] [2022-07-12T20:54:47.160Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/firestore.googleapis.com 200
+[debug] [2022-07-12T20:54:47.160Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/firestore.googleapis.com [omitted]
+[debug] [2022-07-12T20:54:47.161Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/nolan-portfolio [none]
+[debug] [2022-07-12T20:54:47.429Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/nolan-portfolio 200
+[debug] [2022-07-12T20:54:47.430Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/nolan-portfolio {"name":"apps/nolan-portfolio","id":"nolan-portfolio","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.nolan-portfolio.appspot.com","servingStatus":"SERVING","defaultHostname":"nolan-portfolio.uc.r.appspot.com","defaultBucket":"nolan-portfolio.appspot.com","serviceAccount":"nolan-portfolio@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-07-12T20:54:47.430Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-07-12T20:54:47.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-12T20:54:47.430Z] > authorizing via signed-in user (nd.corc@gmail.com)
+[debug] [2022-07-12T20:54:47.430Z] [iam] checking project nolan-portfolio for permissions ["firebase.projects.get"]
+[debug] [2022-07-12T20:54:47.431Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions [none]
+[debug] [2022-07-12T20:54:47.431Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-12T20:54:47.599Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions 200
+[debug] [2022-07-12T20:54:47.599Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-07-12T20:54:51.534Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/releases pageSize=10&pageToken=
+[debug] [2022-07-12T20:54:51.767Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/releases 200
+[debug] [2022-07-12T20:54:51.768Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/releases {"releases":[{"name":"projects/nolan-portfolio/releases/cloud.firestore","rulesetName":"projects/nolan-portfolio/rulesets/03b2d7c4-f430-4294-a0d2-6acaead3f0dc","createTime":"2022-06-22T22:37:58.077784Z","updateTime":"2022-07-12T15:46:33.193758Z"}]}
+[debug] [2022-07-12T20:54:51.769Z] Found ruleset: projects/nolan-portfolio/rulesets/03b2d7c4-f430-4294-a0d2-6acaead3f0dc
+[debug] [2022-07-12T20:54:51.769Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/rulesets/03b2d7c4-f430-4294-a0d2-6acaead3f0dc [none]
+[debug] [2022-07-12T20:54:52.024Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/rulesets/03b2d7c4-f430-4294-a0d2-6acaead3f0dc 200
+[debug] [2022-07-12T20:54:52.025Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/nolan-portfolio/rulesets/03b2d7c4-f430-4294-a0d2-6acaead3f0dc [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-07-12T20:54:55.061Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-07-12T20:54:55.061Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-07-12T20:54:55.391Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-07-12T20:54:55.392Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2022-07-12T20:54:55.399Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-07-12T20:54:55.399Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/nolan-portfolio/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/nolan-portfolio/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with sample code
+[info] pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2022-07-12T20:54:55.402Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-12T20:54:55.402Z] > authorizing via signed-in user (nd.corc@gmail.com)
+[debug] [2022-07-12T20:54:55.402Z] [iam] checking project nolan-portfolio for permissions ["firebase.projects.get"]
+[debug] [2022-07-12T20:54:55.403Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions [none]
+[debug] [2022-07-12T20:54:55.403Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-12T20:54:55.594Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions 200
+[debug] [2022-07-12T20:54:55.595Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nolan-portfolio:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-12T20:54:55.596Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-12T20:54:55.598Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-07-12T20:54:55.848Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-12T20:54:55.848Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2022-07-12T20:54:55.850Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/runtimeconfig.googleapis.com 200
+[debug] [2022-07-12T20:54:55.850Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/nolan-portfolio/services/runtimeconfig.googleapis.com [omitted]
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote build/404.html 
+[debug] [2022-07-12T20:55:48.365Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-07-12T20:55:48.515Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-07-12T20:55:48.515Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.9.0","browserURL":"https://www.gstatic.com/firebasejs/9.9.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.9.0/firebase.tgz"},"live":{"version":"9.9","browserURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.9.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.9.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.9.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.9.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.9.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.9.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.9.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote build/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/nolan/dev/apps/portfolio_apps/my_portfolio 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=871725023&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-07-12T20:55:49.176Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-07-12T20:55:49.176Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-07-12T20:55:49.433Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-07-12T20:55:49.433Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-07-12T20:55:49.437Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-07-12T20:55:49.737Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-07-12T20:55:49.737Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ndcorc","id":12104605,"node_id":"MDQ6VXNlcjEyMTA0NjA1","avatar_url":"https://avatars.githubusercontent.com/u/12104605?v=4","gravatar_id":"","url":"https://api.github.com/users/ndcorc","html_url":"https://github.com/ndcorc","followers_url":"https://api.github.com/users/ndcorc/followers","following_url":"https://api.github.com/users/ndcorc/following{/other_user}","gists_url":"https://api.github.com/users/ndcorc/gists{/gist_id}","starred_url":"https://api.github.com/users/ndcorc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ndcorc/subscriptions","organizations_url":"https://api.github.com/users/ndcorc/orgs","repos_url":"https://api.github.com/users/ndcorc/repos","events_url":"https://api.github.com/users/ndcorc/events{/privacy}","received_events_url":"https://api.github.com/users/ndcorc/received_events","type":"User","site_admin":false,"name":"Nolan Corcoran","company":null,"blog":"nolancorcoran.dev","location":"Austin, TX","email":"nd.corc@gmail.com","hireable":true,"bio":"Cloud architect and full-stack developer w/ current focus in Google Cloud (+Firebase) and Flutter","twitter_username":null,"public_repos":20,"public_gists":5,"followers":11,"following":9,"created_at":"2015-04-24T20:01:31Z","updated_at":"2022-06-24T18:30:14Z","private_gists":5,"total_private_repos":12,"owned_private_repos":12,"disk_usage":1223420,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as ndcorc 
+[info] 
+[debug] [2022-07-12T20:56:05.866Z] >>> [apiv2][query] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key type=owner
+[debug] [2022-07-12T20:56:06.078Z] <<< [apiv2][status] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key 404
+[debug] [2022-07-12T20:56:06.078Z] <<< [apiv2][body] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-12T20:56:08.514Z] >>> [apiv2][query] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key type=owner
+[debug] [2022-07-12T20:56:08.722Z] <<< [apiv2][status] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key 404
+[debug] [2022-07-12T20:56:08.723Z] <<< [apiv2][body] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-12T20:56:10.787Z] >>> [apiv2][query] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key type=owner
+[debug] [2022-07-12T20:56:10.996Z] <<< [apiv2][status] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key 404
+[debug] [2022-07-12T20:56:10.996Z] <<< [apiv2][body] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-12T20:56:12.006Z] >>> [apiv2][query] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key type=owner
+[debug] [2022-07-12T20:56:12.219Z] <<< [apiv2][status] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key 404
+[debug] [2022-07-12T20:56:12.219Z] <<< [apiv2][body] GET https://api.github.com/repos/ndcorc/nolan-portfolio/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-07-13T02:19:21.778Z] Error: read EIO
+    at TTY.onStreamRead (node:internal/stream_base_commons:217:20)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.808Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.815Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.819Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.830Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.831Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.832Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.833Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-07-13T02:19:21.834Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:863:11)
+    at Socket._write (node:net:875:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:549:35)
+    at DerivedLogger.emit (node:domain:482:12)
+    at addChunk (/opt/homebrew/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
