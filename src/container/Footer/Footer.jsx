@@ -25,25 +25,25 @@ const Footer = () => {
     setLoading(true);
 
     const contact = {
-/*       _type: "contact",
+      _type: "contact",
       name: formData.username,
       email: formData.email,
-      message: formData.message, */
+      message: formData.message,
     };
 
-    client
+    /* client
       .create(contact)
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err)); */
   };
 
   return (
     <>
       <h2 className="head-text">
-        Take a coffee & <span>chat</span> with me
+        Let's grab a coffee & <span>chat</span>!
       </h2>
 
       <div className="app__footer-cards">
